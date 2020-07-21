@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EPAM LOGIN PAGE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="FirstPage.css" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<script>
+			
+			function validateEmail()
+			{
+				var x=document.getElementById("e").value;
+				var len=x.length;
+				var y="@gmail.com";
+				var len1=y.length;
+				var z=len-len1;
+				if(z<=0 || y.localeCompare(x.substring(z,len))!=0)
+				{
+					alert("Invalid email");
+					return 1;
+				}
+				return 0;
+			}
+		
+			function validatePassword()
+			{
+				var x=document.getElementById("p").value;
+				var regex= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
+				if(!regex.test(x))
+				{
+					alert("Password must be atleast 8 characters and it must have uppercase,lowercase and digits");
+					return 1;
+				}
+				return 0;
+			}
+		
+			function validate()
+			{
+				if(validateEmail() || validatePassword()){}
+				else
+					document.write("Registration successful");
+			}
+</script>
+</head>
+<body class="hero">
+  <div class="container ">
+  	<div class="row gap">
+       <div class="col-12">
+  	      <div class="card  justify-content-center align-text-center text-center ">
+  	          <div class="text-center head"><i class="fa far fa-graduation-cap gif"></i>Sign In<i class="fas fa-times gif1"></i></div>
+  	          <div class="gap2">
+  	              <div class="row">
+        <div class="col-12">
+            <div class="input-group form-group">
+                 <input type="email" id="e" class=" input-field input-icon form-control " placeholder="mail@example.com" aria-describedby="emailHelp">
+                <span class="input-group-append">
+                    <div class="input-group-text bg-transparent"><i class="fa fal fa-envelope  " aria-hidden='true'></i></div>
+                </span>
+             </div>
+        </div>
+                  </div>
+              <div>
+             <div class="row">
+        <div class="col-12">
+            <div class="input-group form-group">
+                <input type="password" id="p" placeholder="password" class="input-field form-control">
+                <span class="input-group-append">
+                    <div class="input-group-text bg-transparent "><i class="fas fa-unlock " aria-hidden='true'></i></div>
+                </span>
+             </div>
+        </div>
+                  </div>
+              <button type="submit"  onclick="validate()"  class="btn btn-primary btn-lg btn-block" id="g">SIGN IN</button>
+              <div class="row justify-content-between">
+			       <div class=" p-2">
+				       <a href="#">Forgot your password?</a>
+			       </div>
+			       <div class="p-2 ">
+				      <a href="#"> Register!</a>
+			       </div>
+		       </div>	
+		       <div class="row ">
+			        <div class="col-5 pr-0 "><hr></div>
+			        <div class="col-2 px-0"><span>or</span></div>
+			        <div class="col-5 pl-0"><hr></div>
+		        </div>
+		        </div>
+   <div class="s">		    	
+   <button type="submit"  class="btn btn-primary btn-lg btn-block" id="l"><i class="fab fa-facebook-f"></i></button>
+   <button type="submit"  class="btn btn-primary btn-lg btn-block" id="h1">g</button>
+   </div>
+   <div class="s">
+   <button type="submit" class="btn btn-primary btn-lg btn-block m-0" id="h2"><span>&#60;</span> <span class="tab">EPAM LOGIN <span class="tab"><span>&#62;</span></button>
+   </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+   
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
